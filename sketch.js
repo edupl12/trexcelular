@@ -37,7 +37,7 @@ function setup(){
   grupo1=new Group()
   grupo2=new Group()
   //crie um sprite de trex
-  trex = createSprite(50,150,20,50);
+  trex = createSprite(50,height*0.9,20,50);
   trex.addAnimation("running", trex_running);
   trex.addAnimation('trex_morto', trex_morto);
   trex.scale=0.9
@@ -141,7 +141,7 @@ function draw(){
     
     restart.visible=true
 
-    if(mousePressedOver(restart)){
+    if(touches.length>0){
       gamestate=PLAY
       score=0
       choa.velocityX=10
